@@ -56,7 +56,7 @@ data = {'Time':hp.sample_times, 'Strain':hp.data}
 df = pd.DataFrame(data)
 csv = df.to_csv(index=False)
 b64 = base64.b64encode(csv.encode()).decode()  # some strings <-> bytes conversions necessary here
-href = f'<a href="data:file/csv;base64,{b64}">Download Waveform CSV File</a> (right-click and save as &lt;waveform&gt;.csv)'
+href = f'<a href="data:file/csv;base64,{b64}">Download Waveform CSV File</a> (right-click and save as waveform.csv or waveform.txt)'
 st.markdown(href, unsafe_allow_html=True)
 
 
