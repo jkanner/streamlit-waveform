@@ -24,12 +24,14 @@ apx = 'SEOBNRv2'
 
 m1 = st.slider('Set mass 1', 1.0, 100.0, 10.0, step=0.1)
 m2 = st.slider('Set mass 2', 1.0, 100.0, 10.0, step=0.1)
+dist = st.slider('Set Distance in Mpc', 10, 1000, 40)
 
 hp, hc = get_td_waveform(approximant=apx,
                          mass1=m1,
                          mass2=m2,
                          spin1z=0,
                          delta_t=1.0/4096,
+                         distance = dist,
                          f_lower=25)
 
 
